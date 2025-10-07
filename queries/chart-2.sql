@@ -5,4 +5,4 @@ ROUND(AVG(features.liveness), 2) AS average_liveness
 FROM artists
 INNER JOIN features, tracks, albums
 WHERE features.track_id = tracks.id AND tracks.album_id = albums.id AND artists.id = albums.artist_id
-GROUP BY artist_name
+GROUP BY albums.id
